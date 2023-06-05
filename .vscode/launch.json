@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Playwright tests",
+        "console": "integratedTerminal",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "runtimeExecutable": "c:\\node\npx.exe",
+        "runtimeArgs": ["run-script", "test", "--", "${fileBasename}"],
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Playwright Inspector",
+        "console": "integratedTerminal",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "runtimeExecutable": "c:\\node\node.exe",
+        "runtimeArgs": ["run-script", "test", "--", "${fileBasename}"],
+        "env": {
+          "PWDEBUG": "1",
+        }
+      }
+    ]
+  }
